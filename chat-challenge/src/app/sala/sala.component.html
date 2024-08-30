@@ -1,0 +1,16 @@
+<p>Sala</p>
+
+
+<div>
+    <div>
+        <app-mensaje-usuario [usuario]="'Don Pepito'" (mensajeEnviado)="agregarMensaje($event)"></app-mensaje-usuario>
+        <app-mensaje-usuario [usuario]="'Don José'" (mensajeEnviado)="agregarMensaje($event)"></app-mensaje-usuario>
+    </div>
+    
+    <h3>Mensajes Enviados:</h3>
+    <ul>
+        @for (mensaje of mensajes; track $index) {
+            <li>{{mensaje}}</li>
+        }
+    </ul>
+</div>
